@@ -87,12 +87,49 @@
 
         public bool IsOtherDay(Time other)
         {
+            int totalHours = _hours + other._hours;
+
+            if (totalHours > 23)
+                return true;
+
             return false;
         }
 
         public Time Add(Time other)
         {
-            return null;
+            int ms = _milliseconds + other._milliseconds;
+            int s = _seconds + other._seconds;
+            int m = _minutes + other._minutes;
+            int h = _hours + other._hours;
+
+            // Ajustar milisegundos
+            if (ms > 999)
+            {
+                s += ms / 1000;
+                ms = ms % 1000;
+            }
+
+            // Ajustar segundos
+            if (s > 59)
+            {
+                m += s / 60;
+                s = s % 60;
+            }
+
+            // Ajustar minutos
+            if (m > 59)
+            {
+                h += m / 60;
+                m = m % 60;
+            }
+
+            // Ajustar horas
+            if (h > 23)
+            {
+                h = h % 24;
+            }
+
+            return new Time(h, m, s, ms);
         }
     }
 }

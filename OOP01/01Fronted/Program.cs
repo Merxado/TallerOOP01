@@ -1,5 +1,6 @@
 ﻿using _01Bakends;
 using System;
+using System.Timers;
 
 namespace _01Frontend
 {
@@ -9,8 +10,12 @@ namespace _01Frontend
         {
             try
             {
-                Time t = new Time(1, 1, 0, 0);
-                Console.WriteLine(t.ToSeconds());
+                Time t1 = new Time(23, 58, 34, 666);
+                Time t2 = new Time(1, 5, 30, 500);
+
+                Time result = t1.Add(t2);
+
+                Console.WriteLine(result);
             }
             catch (Exception ex)
             {
