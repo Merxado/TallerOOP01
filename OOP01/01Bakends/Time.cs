@@ -81,7 +81,8 @@
 
         public int ToMinutes()
         {
-            return 0;
+            return (_hours * 60)
+                 + _minutes;
         }
 
         public bool IsOtherDay(Time other)

@@ -9,8 +9,8 @@ namespace _01Frontend
         {
             try
             {
-                Time t = new Time(23, 58, 34, 666);
-                Console.WriteLine(t);
+                Time t = new Time(1, 1, 0, 0);
+                Console.WriteLine(t.ToSeconds());
             }
             catch (Exception ex)
             {
