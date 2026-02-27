@@ -48,7 +48,20 @@
         // Methods
         public override string ToString()
         {
-            return "";
+            int displayHour = _hours;
+            string period = "AM";
+
+            if (_hours == 0)
+                displayHour = 12;
+            else if (_hours == 12)
+                period = "PM";
+            else if (_hours > 12)
+            {
+                displayHour = _hours - 12;
+                period = "PM";
+            }
+
+            return $"{displayHour:D2}:{_minutes:D2}:{_seconds:D2}.{_milliseconds:D3} {period}";
         }
 
         public int ToMilliseconds()

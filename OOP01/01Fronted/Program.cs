@@ -1,11 +1,23 @@
 ﻿using _01Bakends;
-using System.Timers;
+using System;
 
-try
+namespace _01Frontend
 {
-    Time t = new Time(25, 10, 10, 10);
-}
-catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Time t = new Time(23, 58, 34, 666);
+                Console.WriteLine(t);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+            Console.ReadLine();
+        }
+    }
 }
