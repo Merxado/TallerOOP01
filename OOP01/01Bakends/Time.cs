@@ -74,7 +74,9 @@
 
         public int ToSeconds()
         {
-            return 0;
+            return (_hours * 60 * 60)
+                 + (_minutes * 60)
+                 + _seconds;
         }
 
         public int ToMinutes()
