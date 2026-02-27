@@ -1,51 +1,30 @@
 ﻿using _01Bakends;
 using System;
-
-namespace _01Frontend
+try
 {
-    internal class Main
+    var t1 = new Time();
+    var t2 = new Time(14);
+    var t3 = new Time(9, 34);
+    var t4 = new Time(19, 45, 56);
+    var t5 = new Time(23, 3, 45, 678);
+
+    var times = new List<Time> { t1, t2, t3, t4, t5 };
+
+    foreach (Time time in times)
     {
-        static void Main(string[] args)
-        {
-            try
-            {
-                Time t1 = new Time();
-                Time t2 = new Time(10);
-                Time t3 = new Time(23, 58, 34, 666);
-                Time t4 = new Time(5, 10, 20, 300);
-                Time t5 = new Time(12, 30, 15);
-
-                Console.WriteLine("Horas originales:");
-                Console.WriteLine($"t1: {t1}");
-                Console.WriteLine($"t2: {t2}");
-                Console.WriteLine($"t3: {t3}");
-                Console.WriteLine($"t4: {t4}");
-                Console.WriteLine($"t5: {t5}");
-
-                Console.WriteLine("\nSumando cada hora con t3:");
-
-                Time[] times = { t1, t2, t3, t4, t5 };
-
-                foreach (Time t in times)
-                {
-                    Time result = t.Add(t3);
-                    Console.WriteLine($"{t} + {t3} = {result}");
-                }
-
-                Console.WriteLine("\nVerificando si pasa al siguiente día con t4:");
-
-                foreach (Time t in times)
-                {
-                    bool otherDay = t.IsOtherDay(t4);
-                    Console.WriteLine($"{t} + {t4} pasa al otro día? {otherDay}");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-
-            Console.ReadLine();
-        }
+        Console.WriteLine($"Time: {time}");
+        Console.WriteLine($"\tMilliseconds: {time.ToMilliseconds(),15:N0}");
+        Console.WriteLine($"\tSeconds     : {time.ToSeconds(),15:N0}");
+        Console.WriteLine($"\tMinutes     : {time.ToMinutes(),15:N0}");
+        Console.WriteLine($"\tAdd         : {time.Add(t3)}");
+        Console.WriteLine($"\tIs Other day: {time.IsOtherDay(t4)}");
+        Console.WriteLine();
     }
+
+    var t6 = new Time(45, -7, 90, -87);
+}
+
+catch (Exception exception)
+{
+    Console.WriteLine(exception.Message);
 }
