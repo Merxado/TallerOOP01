@@ -66,7 +66,10 @@
 
         public int ToMilliseconds()
         {
-            return 0;
+            return (_hours * 60 * 60 * 1000)
+                 + (_minutes * 60 * 1000)
+                 + (_seconds * 1000)
+                 + _milliseconds;
         }
 
         public int ToSeconds()
