@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="_01Bakends.Time">
-    <Position X="8.25" Y="1.5" Width="1.5" />
+    <Position X="8.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIACAACAAAAAAAEAAAgAAAEAAAIAAAAEAAAAACAAgA=</HashCode>
+      <HashCode>AAIACAACAACAAAAEAAAgAAIEAEAIACIAFAAAAACwAgA=</HashCode>
       <FileName>Time.cs</FileName>
     </TypeIdentifier>
   </Class>
