@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="_01Bakends.Date">
-    <Position X="9.5" Y="2" Width="1.5" />
+  <Class Name="_01Bakends.Time">
+    <Position X="10.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAJAAAAAAEAAEAAAMAAAAAAACEMAAAAAAAAAA=</HashCode>
-      <FileName>Date.cs</FileName>
+      <HashCode>AAIACAACAAAAAAAEAAAgAAAEAAAIAAAAEAAAAACAAgA=</HashCode>
+      <FileName>Time.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
